@@ -1,0 +1,479 @@
+.nav-items {
+  padding: 0px 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-items ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-items ul li {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #333;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu div {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 4px;
+}
+
+/* Dropdown styling */
+.products-dropdown {
+  position: relative;
+}
+
+.products-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 40px; /* Adjust based on the padding */
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  padding: 10px;
+  width: 200px;
+}
+
+.products-dropdown .dropdown li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.products-dropdown .dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.products-dropdown:hover .dropdown {
+  display: block;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .nav-items ul {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-items.active ul {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .products-dropdown .dropdown {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.animation-img {
+  width: 100%;
+}
+
+.animation {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.animation-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.animation-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: to make text more readable */
+  padding: 20px;
+}
+
+.animation-heading,
+.animation-para {
+  color: #ffffff;
+  font-family: "Nunito Sans", Sans-serif;
+  font-size: 22px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.49);
+}
+
+.animation-button button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Ensure the header spans the full width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for clarity */
+}
+
+.logo img {
+  max-width: 150px; /* Adjust logo size */
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 20px; /* Space between nav items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items li {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-items ul {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+  }
+
+  .nav-items.active ul {
+    display: flex; /* Show the nav on toggle */
+  }
+}
+
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Show hamburger on smaller screens */
+  }
+
+  .nav-items {
+    display: none; /* Hide nav items by default */
+  }
+
+  .nav-items.active {
+    display: block; /* Show nav items when active */
+  }
+}
+
+.nav-items ul li:hover {
+  color: #ff6600; /* Hover effect */
+}
+
+.about-company {
+  max-width: 800px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the div horizontally */
+  padding: 20px; /* Add padding for spacing inside the div */
+  text-align: center; /* Center align the text */
+  line-height: 1.6; /* Improve readability */
+}
+
+.about-company h1,
+.about-company h2 {
+  margin-bottom: 10px; /* Space between heading and subheading */
+}
+
+.about-company p {
+  margin-top: 20px; /* Space between paragraph and heading */
+}
+
+.app {
+  padding: 0 40px; /* Add space on left and right */
+}
+
+.categories {
+  margin: 20px 70px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+  flex-wrap: wrap; /* Allows cards to wrap into new rows */
+  padding: 20px 0; /* Top and bottom padding only for categories */
+}
+
+.category-card {
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px; /* Adjusted size of the cards */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.2s ease;
+  margin-bottom: 20px; /* Space between rows */
+  flex: 1 1 calc(40% - 20px); /* Ensure two cards per row */
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .category-card {
+    flex: 1 1 100%; /* Stack cards in one column on smaller screens */
+  }
+}
+
+/* .mobile-app {
+  padding: 20px 40px; /* Add padding for alignment with Categories 
+} */
+
+.mobile-app-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack options vertically */
+  /* gap: 20px; Space between the options */
+  align-items: center; /* Center the options in the container */
+}
+
+.mobile-app-option {
+  /* border: 1px solid #ccc; */
+  /* border-radius: 10px; */
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Make each option take up the full row */
+  max-width: 800px; /* Limit the max width for a cleaner look */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.2s ease;
+}
+
+/* .mobile-app-option:hover {
+  transform: scale(1.05);
+} */
+
+.mobile-app-option img {
+  width: 100%;
+  /* Make image responsive within the container */
+  height: auto;
+  /* border-radius: 8px; */
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+/* Responsive behavior to maintain the full width on smaller screens */
+@media (max-width: 768px) {
+  .mobile-app-option {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none; /* Remove max-width constraint on small screens */
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.feature-card {
+  width: 25%; /* Adjust width to allow 3 cards per row */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.feature-logo img {
+  /* width: 100%; */
+  height: auto;
+}
+
+.feature-title h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.feature-description p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100%; /* Stack cards in one column on smaller screens */
+  }
+}
+
+/*  */
+.team-member-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 250px;
+}
+
+.team-member-card .member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.team-member-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.team-member-card .linkedin-icon {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+}
+/*  */
+.about-us-header {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about-us-header h1 {
+  font-size: 36px;
+}
+
+.about-us-header p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Styles for the grid to handle two rows with different numbers of cards */
+/* Container to hold the team members */
+.team-member-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns in the first row */
+  /* gap: 10px; Spacing between cards */
+  justify-items: center; /* Center the items */
+  margin: 20px;
+}
+
+.team-member-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Consistent width for all cards */
+  height: 350px; /* Consistent height for all cards */
+  padding: 20px;
+  text-align: center;
+}
+
+.team-member-image {
+  width: 100%;
+  height: 150px; /* Consistent image height */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image is centered and scaled properly */
+  margin-bottom: 15px;
+}
+
+/* Ensuring both rows are aligned properly */
+@media screen and (min-width: 768px) {
+  .team-member-container {
+    grid-template-columns: repeat(4, 1fr); /* First row has 4 members */
+    grid-auto-rows: auto; /* Auto-adjusts row heights */
+  }
+
+  .team-member-container > :nth-child(5) {
+    grid-column-start: 1; /* Start a new row for the 5th member */
+  }
+
+  /* Set 5 columns in the second row for the remaining members */
+  .team-member-container > :nth-child(5) ~ * {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
